@@ -63,6 +63,15 @@ if ((int(i) % 4 == 0) and (int(i) % 100 != 0)) or (int(i) % 400 == 0):
     print("YES")
 else:
     print("NO")
+    
+# 閏年判斷 - 3 
+
+import calendar as ca
+year = int(input())
+if ca.isleap(year) == True:
+  print("YES")
+else:
+  print("NO")
 
 # 我討厭偶數
 
@@ -227,6 +236,16 @@ if ((int(i) % 4 == 0) and (int(i) % 100 != 0)) or (int(i) % 400 == 0):
     print("a leap year")
 else:
     print("a normal year")
+    
+# 格瑞哥里的煩惱 (1行版) - 3
+
+import calendar as ca
+year = int(input())
+
+if ca.isleap(year) == True:
+  print("a leap year")
+else:
+  print("a normal year")
 
 # 格瑞哥里的煩惱 (t行版) - 1
 
@@ -249,6 +268,18 @@ for j in range(k):
         print("a leap year")
     else:
         print("a normal year")
+        
+# 格瑞哥里的煩惱 (t行版) - 3
+
+import calendar as ca
+
+a = int(input())
+for i in range(a):
+  year = int(input())
+  if ca.isleap(year) == True:
+    print("a leap year")
+  else:
+    print("a normal year")
 
 # 格瑞哥里的煩惱 (0尾版) - 1
 
@@ -274,6 +305,19 @@ while True:
         print("a leap year")
     else:
         print("a normal year")
+        
+# 格瑞哥里的煩惱 (0尾版) 邪教版
+
+import calendar as ca
+while True:
+  year = int(input())
+  if year == 0:
+    break
+  else:
+    if ca.isleap(year) == True:
+      print("a leap year")
+    else:
+      print("a normal year")
 
 # 格瑞哥里的煩惱 (EOF版) - 1
 
@@ -300,6 +344,19 @@ while True:
         print("a leap year")
     else:
         print("a normal year")
+        
+# 格瑞哥里的煩惱 (EOF版) - 3
+
+import calendar as ca
+while True:
+  try:
+    year = int(input())
+    if ca.isleap(year) == True:
+      print("a leap year")
+    else:
+      print("a normal year")
+  except EOFError:
+    break
 
 # 格瑞哥里的煩惱 (Case版) - 1
 
@@ -322,6 +379,17 @@ for j in range(k):
         print("Case {}: a leap year".format(j+1))
     else:
         print("Case {}: a normal year".format(j+1))
+        
+ # 格瑞哥里的煩惱 (Case版) - 3
+
+import calendar as ca
+a = int(input())
+for i in range(a):
+  year = int(input())
+  if ca.isleap(year) == True:
+    print("Case", str(i+1)+":", "a leap year")
+  else:
+    print("Case", str(i+1)+":", "a normal year")
 
 # 77乘法表 - 1
 # 本題解法邪教
