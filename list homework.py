@@ -97,7 +97,42 @@ for i in vote:
 
 print(str(vege)+" "+str(beef)+" "+str(pork)+" "+str(chick)+" "+str(sea))
 
+# f528: 一個都不能少
 
+a = input().split()
+people = [str(i) for i in range(1,int(int(a[0]))+1)]
+out = []
+out2 = []
+a.pop(0)
+a.pop(0)
 
+for i in people:
+  if i in a:
+    continue
+  else:
+    out.append(i)
 
+for i in out:
+  out2.append(int(i))
+
+out = ""
+
+for i in out2:
+  out += str(i)
+  out += " "
+
+print(out.lstrip())
+
+# f529: 熱門點播
+max = 0
+
+a = input().split()
+a.pop(0)
+
+for i in a:
+  if a.count(i) > max:
+    max = a.count(i)
+    song = i
+
+print(song+" "+str(max))
 
