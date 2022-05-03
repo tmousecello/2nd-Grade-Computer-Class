@@ -27,3 +27,43 @@ while True:
     print(cout)
   except EOFError:
     break
+
+# f530: GJ-b006-Hello, XXX! (**) 
+
+print("Hello, "+input()+"!")
+
+# f531: GJ-b007-倒背如流 (**) 
+
+txt = input()[::-1]
+print(txt)
+
+# f532: GJ-b008-迴文 (**) 
+
+txt = input()
+txt2 = txt[::-1]
+if txt == txt2:
+  print("YES")
+else:
+  print("NO")
+  
+# f533: GJ-b009-無限猴子定理 
+
+txt = input().split()
+a,b = [],[]
+count = 0
+for i in txt[0]:
+  a.append(i)
+for i in txt[1]:
+  b.append(i)
+
+for i in a:
+  if i in b:
+    count+=1
+    del b[0:b.index(i)+1]
+    continue
+  else:
+    print("NO")
+    break
+
+if count == len(a):
+  print("YES")
