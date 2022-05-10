@@ -128,7 +128,7 @@ for i in ascii:
     out+=chr(int(i)-2)
 print(out)
 
-# f535: GJ-b011-字裡玄機 
+# f535-1: GJ-b011-字裡玄機 
 a = []
 for i in input():
   a.append(i)
@@ -166,7 +166,22 @@ for i in c:
 
 print(int(a2)+int(b2)int(c2))
 
-# f536: GJ-b012-羅馬數字 
+# f535-2: GJ-b011-字裡玄機
+
+s = 0
+for i in range(3):
+    n = input()
+    p = []
+    for i in n:
+        try:
+            p.append(int(i))
+        except Exception:
+            pass
+    for j in range(len(p)):
+        s += p[j]*(10**(len(p)-j-1))
+print(s)
+
+# f536-1: GJ-b012-羅馬數字 
 
 r = {
     'I' : 1,
@@ -191,3 +206,15 @@ for i in range(0,len(a)-1,1):
     res -= 2*r[a[i]]
 
 print(res)
+
+# f536-2: GJ-b012-羅馬數字 
+
+roman = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+num = 0
+r = input()
+for i in range(len(r)):
+    if i+1 < len(r) and roman[r[i]] < roman[r[i+1]]:
+        num -= roman[r[i]]
+    else:
+        num += roman[r[i]]
+print(num)
