@@ -111,3 +111,83 @@ for i in a:
         print("NO")
         exit(0)
 print("YES")
+
+# f534: GJ-b010-編碼破解
+
+ascii = []
+out = ""
+for i in input():
+  ascii.append(ord(i))
+
+for i in ascii:
+  if i == 65:
+    out+="Y"
+  elif i == 66:
+    out+="Z"
+  else:
+    out+=chr(int(i)-2)
+print(out)
+
+# f535: GJ-b011-字裡玄機 
+a = []
+for i in input():
+  a.append(i)
+b = []
+for i in input():
+  b.append(i)
+c = []
+for i in input():
+  c.append(i)
+
+num = 9
+a2 = ""
+b2 = ""
+c2 = ""
+
+
+for i in a:
+  try:
+    num += int(i)
+    a2 += i
+  except Exception:
+    continue
+for i in b:
+  try:
+    num += int(i)
+    b2 += i
+  except Exception:
+    continue
+for i in c:
+  try:
+    num += int(i)
+    c2 += i
+  except Exception:
+    continue
+
+print(int(a2)+int(b2)int(c2))
+
+# f536: GJ-b012-羅馬數字 
+
+r = {
+    'I' : 1,
+    'V' : 5,
+    'X' : 10,
+    'L' : 50,
+    'C' : 100,
+    'D' : 500,
+    'M' : 1000
+}
+
+s = input()
+a = [i for i in s]
+
+
+res = 0
+for i in a:
+  res += r[i]
+
+for i in range(0,len(a)-1,1):
+  if r[a[i]] < r[a[i+1]]:
+    res -= 2*r[a[i]]
+
+print(res)
