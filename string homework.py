@@ -218,3 +218,18 @@ for i in range(len(r)):
     else:
         num += roman[r[i]]
 print(num)
+
+# d235: 10929 - You can say 11
+
+while True:
+  r = str(input())
+  if r == "0":
+    break
+  else:
+    num = [int(i) for i in r]
+    a = sum(num[0::2])
+    b = sum(num[1::2])
+    if abs(a-b)%11 == 0:
+      print(r +" is a multiple of 11.")
+    else:
+      print(r +" is not a multiple of 11.")
