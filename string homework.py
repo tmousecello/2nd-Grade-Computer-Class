@@ -233,3 +233,47 @@ while True:
       print(r +" is a multiple of 11.")
     else:
       print(r +" is not a multiple of 11.")
+
+# f537: GJ-b013-評語重排 
+
+a = input()
+b = input()
+c = input()
+print(c,)
+print(a)
+print(b)
+
+# f538: GJ-b014-打蚊子大賽 
+ing1 = input().split()
+g1 = []
+for i in ing1:
+  g1.append(int(i))
+ing2 = input().split()
+g2 = []
+for i in ing2:
+  g2.append(int(i))
+ing3 = input().split()
+g3 = []
+for i in ing3:
+  g3.append(int(i))
+
+if sum(g1)>sum(g2) and sum(g1)>sum(g3):
+  print("1",str(sum(g1)))
+elif sum(g2)>sum(g3) and sum(g2)>sum(g1):
+  print("2",str(sum(g2)))
+else:
+  print("3",str(sum(g3)))
+
+# f539: GJ-b015-追殺比爾 
+line1 = input().split()
+line2 = input().split()
+line3 = input().split()
+
+if "BILL" in line1:
+  print("1", str(int(line1.index("BILL"))+1))
+elif "BILL" in line2:
+  print("2", str(int(line2.index("BILL"))+1))
+elif "BILL" in line3:
+  print("3", str(int(line3.index("BILL"))+1))
+else:
+  print("NO")
