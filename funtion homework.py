@@ -73,3 +73,39 @@ for i in range(3,len(a)):
   gcd = math.gcd(gcd, int(a[i]))
 
 print(gcd)
+
+10# c013: 00488 - Triangle Wave
+
+def wave(h):
+    for i in range(h):
+        print(str(i)*i)
+    for i in range(h,0,-1):
+        print(str(i)*i)
+    print("")
+
+re = int(input())
+asndf = input()
+for i in range(re):
+    a = int(input())
+    f = int(input())
+    for i in range(f):
+      wave(a)
+
+  # b513: 判斷質數-商競103
+
+# 質數判斷
+def check(n):
+    sqrtn = int(n**0.5)
+    final = ""
+    if n > 1:
+        for i in range (2,sqrtn+1):
+            if n % i == 0:
+                 final = "N"
+                 break
+    if final != "N":
+      final = "Y"
+    print(final)
+
+a = int(input())
+for i in range(a):
+  check(int(input()))
